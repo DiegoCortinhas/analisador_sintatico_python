@@ -21,7 +21,7 @@ tokens = (
     'LOG'
 )
 
-# Regular expression rules for simple tokens
+# Expressões Regulares
 t_PLUS = r'\+'
 t_MINUS = r'-'
 t_TIMES = r'\*'
@@ -51,7 +51,7 @@ def t_newline(t):
 # Funcao para ignorar espaços
 t_ignore = ' \t'
 
-# Error handling rule
+# Funcao para lidar com erros
 def t_error(t):
     print("Caractere não suportado pela gramatica. '%s'" % t.value[0])
     t.lexer.skip(1)
